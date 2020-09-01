@@ -1,0 +1,32 @@
+query searchUserByQuery($query:String!, $limit:Int, $before:String, $after:String) {
+    search(query:$query, type:USER, first:$limit, before:$before, after:$after) {
+        pageInfo {
+            startCursor,
+            endCursor,
+            hasPreviousPage,
+            hasNextPage
+        }
+        userCount,
+        edges {
+            cursor,
+            node {
+                ... on User {
+                    id,
+                    login,
+                    name,
+                    avatarUrl
+                },
+                ... on Organization {
+                    id,
+                    login,
+                    name,
+                    avatarUrl
+                }
+            },
+            textMatches {
+                fragment,
+                property
+            }
+        }
+    }
+}

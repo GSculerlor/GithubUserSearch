@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Github User Search</string>
+    <string name="user_avatar">user avatar</string>
+    <string name="query_example">pikachu</string>
+    <string name="query_hint">Search Github users</string>
+    <string name="no_result">no result :(</string>
+</resources>
